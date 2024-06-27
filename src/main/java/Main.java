@@ -8,7 +8,7 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args){
-        
+
         int number = getInputNumber();
         int sum = sumOfNumbers(number);
         System.out.println(sum);
@@ -18,15 +18,24 @@ public class Main {
     // do this one and the lab is complete. really.
     // return the sum of 0 to n... if n == 3, the result should be 6
     static int sumOfNumbers(int n) {
-      //  int input = getInputNumber();
+
+        //Start of timer
+        long startTime, endTime, elapsedTime;
+        startTime = System.currentTimeMillis();
+
+        //  int input = getInputNumber();
         int sum = 0;
         for(int i = 0; i <= n; i++) {
             sum += i;
         }
+        //End of timer
+        endTime = System.currentTimeMillis();
+        elapsedTime = endTime - startTime;
+        System.out.println("Total execution time: " + elapsedTime);
+
         return sum;
     }
-    
-    
+
     static int getInputNumber() { // gee, maybe this is useful in another lab?
         Scanner scan = new Scanner(System.in);
         System.out.print("Please enter a positive number: ");
