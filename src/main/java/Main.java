@@ -18,10 +18,10 @@ public class Main {
     // do this one and the lab is complete. really.
     // return the sum of 0 to n... if n == 3, the result should be 6
     static int sumOfNumbers(int n) {
-        int input = getInputNumber();
+      //  int input = getInputNumber();
         int sum = 0;
-        for(int i = 0; i <= getInputNumber(); i++) {
-            sum += 1;
+        for(int i = 0; i <= n; i++) {
+            sum += i;
         }
         return sum;
     }
@@ -32,15 +32,16 @@ public class Main {
         System.out.print("Please enter a positive number: ");
         // This method reads the number provided using keyboard
         int num = scan.nextInt();
-        if (num <= 0) {
-            System.out.println("This isn't a positive number, try again.");
-        } else {
-            return num;
-        }
+//        if (num <= 0) {
+//            System.out.println("This isn't a positive number, try again.");
+//        } else {
+//            return num;
+//        }
 
         // Closing Scanner after the use
         scan.close();
         return num;
+
     }
     // for Extra Credit
     int gaussianSumOfNumbers(int n) {
